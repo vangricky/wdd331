@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
+
+h1 {
+  font-size: 55px;
+  text-align: center;
+  border-bottom: solid 1px #d0d0d0;
+  padding-bottom: 45px;
+}
+
+h1 a {
+  color: black;
+}
+
+.post-date {
+  text-align: right;
+  text-transform: uppercase;
+  padding-top: 30px;
+  padding-bottom: 15px;
+  border-bottom: solid 1px #d0d0d0;
+}
+
+header {
+  text-align: center;
+}
+
+h1,
+h2 {
+  font-family: Lora, sans-serif;
+}
+
+h2 a {
+  color: #757373;
+}
+
+p {
+  font-family: Helvetica, Arial, sans-serif;
+  color: #333;
+  font-weight: bold;
+  text-align: left;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+nav {
+  border-bottom: solid 1px #d0d0d0;
+}
+
+ul {
+  font-size: 22px;
+}
+
+li {
+  list-style-type: none;
+  padding-bottom: 20px;
+  list-style-position: inside;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav a {
+  text-transform: uppercase;
+  color: #757373;
+}
+
+img {
+  width: 80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+p a {
+  color: #757373;
+}
