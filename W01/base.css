@@ -8,7 +8,19 @@ h1 {
 }
 
 h1 a {
-  color: black;
+  color: #333;
+}
+
+a:active {
+  color: #deb887;
+}
+
+a:hover {
+  color: #00ddff;
+}
+
+header h1 a:hover {
+  color: #333;
 }
 
 .post-date {
@@ -29,7 +41,7 @@ h2 {
 }
 
 h2 a {
-  color: #757373;
+  color: #333;
 }
 
 p {
@@ -61,7 +73,7 @@ a {
 
 nav a {
   text-transform: uppercase;
-  color: #757373;
+  color: #666;
 }
 
 img {
@@ -72,5 +84,5 @@ img {
 }
 
 p a {
-  color: #757373;
+  color: #333;
 }

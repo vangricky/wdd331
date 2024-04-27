@@ -1,7 +1,32 @@
 @media only screen and (min-width: 32em) {
   nav li {
     display: inline;
+    padding-left: 20px;
+  }
+
+  nav ul {
     text-align: right;
+  }
+
+  article {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    /* grid-template-rows: 1fr; */
+  }
+
+  article h2 {
+    padding-left: 10px;
+  }
+  .post-date {
+    border: none;
+    text-align: right;
+    padding-right: 15px;
+    padding-top: 0px;
+  }
+
+  .post-content {
+    border-bottom: solid 1px #d0d0d0;
+    border-left: solid 1px #d0d0d0;
   }
 
   img {
