@@ -1,0 +1,101 @@
+$text-color: #333;
+$border-color: #d0d0d0;
+$active-color: #deb887;
+$hover-color: #00ddff;
+
+@mixin post-date() {
+  text-align: right;
+  text-transform: uppercase;
+  padding-top: 30px;
+  padding-bottom: 15px;
+  border-bottom: solid 1px $active-color;
+}
+
+@mixin heading-one() {
+  font-size: 55px;
+  text-align: center;
+  border-bottom: solid 1px $active-color;
+  padding-bottom: 45px;
+}
+
+@mixin paragraph() {
+  font-family: Helvetica, Arial, sans-serif;
+  color: #333;
+  font-weight: bold;
+  text-align: left;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@mixin list() {
+  list-style-type: none;
+  padding-bottom: 20px;
+  list-style-position: inside;
+}
+
+@mixin image() {
+  width: 80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+header {
+  text-align: center;
+  h1 {
+    @include heading-one();
+    font-family: Lora, sans-serif;
+  }
+  h1 a {
+    color: $active-color;
+    text-decoration: none;
+  }
+}
+
+a:active {
+  color: $active-color;
+}
+
+a:hover {
+  color: $hover-color;
+}
+
+.post-date {
+  @include post-date();
+}
+
+h2 {
+  font-family: Lora, sans-serif;
+}
+
+h2 a {
+  color: $text-color;
+}
+
+p {
+  @include paragraph();
+}
+
+nav {
+  border-bottom: solid 1px $border-color;
+  a {
+    text-transform: uppercase;
+    color: #666;
+  }
+}
+
+ul {
+  font-size: 22px;
+}
+
+li {
+  @include list();
+}
+
+img {
+  @include image();
+}
+
+p a {
+  color: $text-color;
+}
