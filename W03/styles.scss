@@ -1,0 +1,116 @@
+//color variables
+$body-background-color: darkred;
+$form-background-color: white;
+$input-color: rgba(240, 221, 192, 0.171);
+$headlines-color: white;
+$contact-form-color: rgb(218, 208, 155);
+$heading1-color: white;
+
+//mixin (function)
+@mixin center($width, $max-width: 960px) {
+  width: 90%;
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin center2() {
+  width: 90%;
+  max-width: 2500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+//mixin (breakpoint)
+
+$break-small: 200em;
+$break-medium: 500em;
+$break-large: 1000em;
+
+@mixin breakpoint($break) {
+  @if $break == large {
+    @media (max-width: $break-large) {
+      @content;
+      @include center(1000em);
+
+      #contactform {
+        background-color: $contact-form-color;
+      }
+    }
+  } @else if $break == medium {
+    @media (min-width: $break-medium) {
+      @content;
+    }
+  } @else if $break == small {
+    @media (max-width: $break-small) {
+      @content;
+    }
+  } @else {
+    @media ($break) {
+      @content;
+      @include center(1000em);
+    }
+  }
+}
+
+body {
+  //   background-color: lighten($body-background-color, 50%);
+  //   background-color: darken($body-background-color, 10%);
+  //   background-color: mix($body-background-color, green);
+  background-color: $body-background-color;
+  //   background: white;
+  @include breakpoint(large) {
+    background: darkred;
+  }
+  @include breakpoint(medium) {
+    background: darkred;
+  }
+  @include breakpoint(small) {
+    background: darkred;
+  }
+}
+
+//nesting
+// #contactform {
+//   background-color: $form-background-color;
+//   input,
+//   textarea {
+//     background-color: $input-color;
+//     flex: 2;
+//   }
+// }
+
+//nesting2
+// #contactform {
+//   background-color: $form-background-color;
+//   input,
+//   textarea {
+//     background-color: $input-color;
+//     flex: 2;
+//   }
+//   @media (min-width: $break-small) {
+//     & {
+//       width: 90%;
+//       max-width: 700px;
+//       margin-left: auto;
+//       margin-right: auto;
+//     }
+//   }
+//   @media (max-width: $break-large) {
+//     & {
+//       width: 70%;
+//       max-width: 900px;
+//       margin-left: auto;
+//       margin-right: auto;
+//     }
+//   }
+//   @include center(500px);
+// }
+
+h1 {
+  color: $heading1-color;
+}
+
+// #contactform {
+//   background-color: $contact-form-color;
+// }
